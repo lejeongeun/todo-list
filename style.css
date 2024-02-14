@@ -39,3 +39,8 @@ body{
     justify-content: space-between;
     padding: 1em;
 }
+.task-done{
+    /*  밑줄  */
+    text-decoration: line-through;
+    background-color: ivory;
+}
