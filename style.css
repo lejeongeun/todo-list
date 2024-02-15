@@ -20,19 +20,22 @@ body{
     border-bottom: 1px solid lightgrey;
     position: relative;
 
+    
+
 }
 .task-tabs div{
     padding: 1em;
-
+    cursor: pointer;
 }
 #under-line{
     height: 4px;
     background-color: lightpink;
-    position: absolute;
-    width: 80px;
+    position: absolute; /*절대값(0, 0)을 부여*/
+    width: 80px; 
     left: 0px;
     top: 52px;
     padding: 0px;
+    transition: 0.5s;
 } 
 .task{
     display: flex;
@@ -42,5 +45,5 @@ body{
 .task-done{
     /*  밑줄  */
     text-decoration: line-through;
-    background-color: ivory;
+    background-color: beige;
 }
