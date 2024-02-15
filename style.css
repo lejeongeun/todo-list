@@ -68,3 +68,11 @@ body{
     /* 추가된 버튼 아이콘의 스타일 */
     font-size: 1.2em;
 }
+#add-button {
+    background-color: white;
+    border-color: rgb(155, 180, 189);
+    cursor: pointer;
+    font-size: 1em;
+    color: skyblue;
+    margin-left: 5px;
+}
