@@ -21,7 +21,11 @@ let filterList = [];
 let mode ='all';
 
 addButton.addEventListener("click", addTask); // add 버튼을 누를 경우 addTask 실행
-
+taskInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
 for(i=1; i<tabs.length; i++){ //tabs[0]의 index를 제외한 1부터 실행 
     tabs[i].addEventListener("click", function(event){ //filter로 event를 넘겨줌
         filter(event); // 
@@ -109,6 +113,13 @@ function deleteTask(id){ // 매개변수 ㅕ
     for(let i=0; i<taskList.length; i++){ // 인덱스를 돌려서 
         if(taskList[i].id == id){  // taskList[i]의 id가 매개뱐수의 id와 같다면
             taskList.splice(i, 1); //taskList의 i번째 하나만 삭제
+
+            for (let j = 0; j < filterList.length; j++) {
+                if (filterList[j].id == id) {
+                    filterList.splice(j, 1);
+                    break;
+                }
+            }
             break;
         }
         taskInput.value = "";
